@@ -1,0 +1,2 @@
+1.0 0.0 0.0 0.0 2.0 0.0 1.0  : left state, rho, u, v, w, by, bz, p
+0.1 0.0 0.0 0.0 1.0 0.0 3.0  : right state, rho, u, v, w, by, bz, p

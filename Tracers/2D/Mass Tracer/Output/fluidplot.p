@@ -1,0 +1,47 @@
+set pm3d map
+set palette color
+
+set terminal png
+
+
+set dgrid3d 300,300
+
+TOP=0.90
+DY = 0.23
+tSteps=160
+tSkip=500
+
+set key font ",5"
+
+set autoscale
+
+do for [i=1:tSteps] { 
+  j=i*tSkip
+  print "Time Steps Completed =".i
+  filename="t=".j.".txt"
+  filename2="frames/t=".j.".png"
+  set output filename2
+  set title "Time Step = #".i
+  set multiplot layout 1,2 rowsfirst  
+  #plot 1: fluid density     
+
+  set label 1 'Fluid Density' at graph 0.92,0.9 font ',8'
+  set xlabel "x"
+  set ylabel "y"
+  splot filename using 1:2:3  
+  unset title
+  unset xlabel
+  unset ylabel
+
+  #plot 2:Velocity tracer density
+  set label 2 'Velocity Tracer' at graph 0.92,0.9 font ',8'
+  set xlabel "x"
+  set ylabel "y" 
+  splot filename using 1:2:4
+  unset xlabel
+  unset ylabel
+
+  unset multiplot
+  unset output
+}
+

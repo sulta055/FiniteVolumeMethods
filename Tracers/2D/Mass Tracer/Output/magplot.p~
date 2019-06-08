@@ -1,0 +1,28 @@
+
+set terminal png
+
+
+tSteps=160
+tSkip=500
+
+set key font ",10"
+
+set autoscale
+
+do for [i=1:tSteps] { 
+  j=i*tSkip
+  print "Time Steps Completed =".i
+  filename="b_t=".j.".txt"
+  filename2="Outputs/b_t=".j.".png"
+  set output filename2
+  set title "Time Step = #".j
+  set xlabel "x"
+  set ylabel "y"
+  set xrange [0:1]
+  set yrange [0:1]
+  plot filename using 1:2:(0.01*$3):(0.01*$4) with vectors 
+  unset title
+  unset xlabel
+  unset ylabel
+}
+unset output
