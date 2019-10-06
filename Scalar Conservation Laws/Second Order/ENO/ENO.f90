@@ -1,6 +1,6 @@
 !Numerically solves Linear Advection equation/Burger's equation using 
 !Hartens-Osher-Engquist-Chakravarthy second order scheme (ENO)
-!Flux function,f(u)=u (Liear advection eqn), 1/2 u^2(Burger's equation)
+!Flux function,f(u)=u (Linear advection eqn), 1/2 u^2(Burger's equation)
 !Wave Speed, a=u
 
 program ENO

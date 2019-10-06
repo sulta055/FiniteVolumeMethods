@@ -1,0 +1,11 @@
+        -Infinity              NaN
+        -Infinity              NaN
+        -Infinity              NaN
+        -Infinity              NaN
+        -Infinity              NaN
+        -Infinity              NaN
+        -Infinity              NaN
+        -Infinity              NaN
+        -Infinity              NaN
+        -Infinity              NaN
+        -Infinity              NaN

@@ -1,0 +1,5 @@
+**TO-DO LIST**
+
+1)Order of accuracy tests (both time and space)
+2)Extend solver to multi-dimensions
+3)Modify hyperbolic equation appropriately for passive variable advection
