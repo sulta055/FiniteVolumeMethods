@@ -1,3 +1,0 @@
-4.0 1.0 1.0   : left state, rho, u, p
-1.0 4.0 1000.0   : right state, rho, u, p
-0.2 :delta parameter

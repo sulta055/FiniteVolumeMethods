@@ -1,2 +1,0 @@
-1.0 0.0 1000.   : left state, rho, u, p
-1.0 0.0 0.01   : right state, rho, u, p

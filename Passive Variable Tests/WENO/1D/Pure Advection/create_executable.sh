@@ -1,6 +1,6 @@
 #!/bin/sh -l
-gfortran weno5adv.f90 -o weno5adv
-#gfortran vanleeradv.f90 -o vanleeradv
-./weno5adv
-#./vanleeradv
+gfortran -c global.f90
+gfortran -c weno5adv.f90 
+gfortran global.o weno5adv.o driver.f90 -o driver
+./driver
 gnuplot "plotOutput.p"

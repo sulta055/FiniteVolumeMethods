@@ -8,7 +8,7 @@ implicit none
 !***********************************************
 !Global Variable Definitions
 !***********************************************
-integer,parameter::nx=100 !number of cells
+integer,parameter::nx=200 !number of cells
 integer,parameter::nt=100 !total time steps
 integer,parameter::RK_option=1 !1:1st order 2:2nd order
 integer,parameter::equation_type=1 !
@@ -103,10 +103,10 @@ subroutine init(u)
 
   do i=1,nx
     x=xmin+(i-0.5)*dx
-    if(x>=0.25 .and. x<=0.45)then
+    if(x>=0.1 .and. x<=0.3)then
       u(i)=1.0
     else
-      u(i)=-1.
+      u(i)=-1.0
     end if
   end do
 
@@ -145,12 +145,17 @@ function a(xi) result(ax)
   !Outputs
   real::ax,x
 
-  !x=xmin+(xi-0.5)*dx
+  x=xmin+(xi-1)*dx
 
   !constant wave speed
-  ax=1. 
+  !ax=1. 
 
-
+  !Discontinuous velocity field
+  if(x<0.5)then
+    ax=1.
+  else
+    ax=0.25
+  end if
 
 end function a
 
@@ -192,7 +197,7 @@ function uexact(x) result(ux)
   if(x>=0.1+t .and. x<=0.3+t)then
     ux=1.0
   else
-    ux=0.
+    ux=-1.0
   end if
 
 end function uexact
