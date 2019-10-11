@@ -84,7 +84,7 @@ if(initOption==2)then
 bxL=3./sqrt(4.*pi)
 bxR=bxL
 
-rhoL=1.0
+rhoL=1.
 uL=0.
 vL=0.
 wL=0.

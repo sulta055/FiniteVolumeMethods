@@ -18,9 +18,9 @@ real::xmin,xmax,ymin,ymax,x,y
 real::gam,gamil,gamul,gamel,gamee,gamuu,gam1,gam2,gam3
 
 
-integer,parameter::initOption=2 !Ryu-Jones (1995) Shock-Tube Tests
-integer,parameter::RKOption=1 !1: RK3 2: RK3
-integer,parameter::debug=1 !0:off 1:on
+integer,parameter::initOption=3 !Ryu-Jones (1995) Shock-Tube Tests
+integer,parameter::RKOption=2 !1: RK3 2: RK4
+integer,parameter::debug=0 !0:off 1:on
 
 
 
